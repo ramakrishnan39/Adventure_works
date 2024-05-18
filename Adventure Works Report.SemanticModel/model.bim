@@ -1817,7 +1817,7 @@
             "summarizeBy": "sum"
           },
           {
-            "name": "Turnover",
+            "name": "Sales",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -1826,9 +1826,29 @@
             ],
             "dataType": "decimal",
             "expression": "[OrderQuantity] * RELATED('Product Lookup'[ProductPrice])",
-            "formatString": "0",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
             "isDataTypeInferred": true,
             "lineageTag": "0a22ac9c-c8a2-4d68-8d54-567763929823",
+            "summarizeBy": "sum",
+            "type": "calculated"
+          },
+          {
+            "name": "Cost",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-IN\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "expression": "'Sales Data'[OrderQuantity] * RELATED('Product Lookup'[ProductCost])",
+            "formatString": "\"₹\"\\ #,0.###############;#,0.###############\\ -\"₹\";\"₹\"\\ #,0.###############",
+            "isDataTypeInferred": true,
+            "lineageTag": "37d38928-1bdc-4c61-a536-53445363e1f1",
             "summarizeBy": "sum",
             "type": "calculated"
           }
@@ -2097,13 +2117,13 @@
                 "value": "{\"currencyCulture\":\"en-IN\"}"
               }
             ],
-            "expression": "SUM('Sales Data'[Turnover])",
+            "expression": "SUM('Sales Data'[Sales])",
             "formatString": "\"₹\"\\ #,0.00;#,0.00\\ -\"₹\";\"₹\"\\ #,0.00",
             "lineageTag": "65d79c4e-468b-4ebc-8160-095552eced27"
           },
           {
             "name": "USG",
-            "expression": "DIVIDE([Total Turnover] - CALCULATE(SUM('Sales Data'[Turnover]), PREVIOUSYEAR('Calendar Lookup'[Date])), CALCULATE(SUM('Sales Data'[Turnover]), PREVIOUSYEAR('Calendar Lookup'[Date])))",
+            "expression": "DIVIDE([Total Turnover] - CALCULATE(SUM('Sales Data'[Sales]), PREVIOUSYEAR('Calendar Lookup'[Date])), CALCULATE(SUM('Sales Data'[Sales]), PREVIOUSYEAR('Calendar Lookup'[Date])))",
             "formatString": "#,0.00%;-#,0.00%;#,0.00%",
             "lineageTag": "77edd0ce-998d-4d2d-9420-f21a346fff63"
           }
