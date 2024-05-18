@@ -1,0 +1,63 @@
+{
+  "config": "{\"version\":\"5.51\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU02\",\"version\":\"5.53\",\"type\":2}},\"activeSectionIndex\":1,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU02",
+            "path": "BaseThemes/CY24SU02.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"c120e2c07936fe9d1f0b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":501.3824884792627,\"z\":0,\"width\":1280,\"height\":218.2488479262673,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Product Categories Lookup.CategoryName\",\"active\":true}],\"Values\":[{\"queryRef\":\"Measures Table.Total Turnover\"},{\"queryRef\":\"Measures Table.USG\"}],\"Columns\":[{\"queryRef\":\"Calendar Lookup.Date.Variation.Date Hierarchy.Year\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Product Categories Lookup\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"Measures Table\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"Calendar Lookup\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"CategoryName\"},\"Name\":\"Product Categories Lookup.CategoryName\",\"NativeReferenceName\":\"CategoryName\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Total Turnover\"},\"Name\":\"Measures Table.Total Turnover\",\"NativeReferenceName\":\"Total Turnover\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"},\"Name\":\"Calendar Lookup.Date.Variation.Date Hierarchy.Year\",\"NativeReferenceName\":\"Date Year\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"USG\"},\"Name\":\"Measures Table.USG\",\"NativeReferenceName\":\"USG\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"CategoryName\"}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 218.25,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 501.38,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Page 2",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectiond0bb32394f917f2865b0",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"95bb9f985b9e0af71a94\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20.64516129032258,\"y\":145.99078341013825,\"z\":0,\"width\":1216.589861751152,\"height\":573.6405529953918,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Product Categories Lookup.CategoryName\",\"active\":true},{\"queryRef\":\"Product Subcategories Lookup.SubcategoryName\",\"active\":true}],\"Values\":[{\"queryRef\":\"Measures Table.Total Turnover\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Product Categories Lookup\",\"Type\":0},{\"Name\":\"p1\",\"Entity\":\"Product Subcategories Lookup\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"Measures Table\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"CategoryName\"},\"Name\":\"Product Categories Lookup.CategoryName\",\"NativeReferenceName\":\"CategoryName\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p1\"}},\"Property\":\"SubcategoryName\"},\"Name\":\"Product Subcategories Lookup.SubcategoryName\",\"NativeReferenceName\":\"SubcategoryName\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Total Turnover\"},\"Name\":\"Measures Table.Total Turnover\",\"NativeReferenceName\":\"Total Turnover\"}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"Product Categories Lookup.CategoryName\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Product Categories Lookup\"}},\"Property\":\"CategoryName\"}}],\"isPinned\":true},{\"queryRefs\":[\"Product Subcategories Lookup.SubcategoryName\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'Accessories'\"}}],\"isToggled\":true}]}}],\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 573.64,
+          "width": 1216.59,
+          "x": 20.65,
+          "y": 145.99,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
